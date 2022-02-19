@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+
+
+<head>
+    <title>Popup</title>
+    <link href="popup.css" rel="stylesheet">
+<!--<script src="popup.js"></script>-->
+    <script src="contentscript.js"></script>
+<!--<script>src= "loadXMLDoc.js"</script>-->
+
+    <script type="text/javascript" src="searchindex.js"></script>
+
+
+</head>
+
+
+
+<body>
+<h1>Caption Searcher</h1>
+<h2>Search video for text</h2>
+<!--<div role="main">-->
+    <!--<form>-->
+        <!--<input type="text" id="search" placeholder="SearchCaptions..." required>-->
+
+        <!--<input type="submit" id="button" value="Search" onclick= loadXMLDoc()>-->
+
+        <!--&lt;!&ndash;<input type="text" id="search"  autocomplete="off" /> &ndash;&gt;-->
+
+    <!--</form>-->
+<!--</div>-->
+
+
+
+<form action="">
+    <input type="text" id="searchme" placeholder="SearchCaptions..." required />
+    <input type="submit" value="Search" onclick="searchIndex(); return false;" />
+</form>
+
+
+<!--Show loading GIF while matches are returned from searchIndex -->
+<div id="loading">
+    <img src="ajax-loader.gif">Searching for matches
+</div>
+
+
+
+<div id="resultshere">
+</div>
+
+
+
+</body>
+</html>

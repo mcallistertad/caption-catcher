@@ -1,0 +1,47 @@
+{  
+   "name":"CaptionCatcher",
+   "version":"1.0",
+   "manifest_version":2,
+   "description":"Searches captions for specific words/ phrases",
+   "permissions": [
+       "tabs",
+       "activeTab",
+       "history",
+       "downloads",
+       "http://*/",
+       "https://*/"
+   ],
+
+   "content_security_policy": "default-src 'self' https://apis.google.com",
+   "background": {
+        "persistent": true,
+        "scripts":[
+           "background.js"
+       ]
+    },
+
+   "homepage_url": "http://www.youtube.com",
+    
+    "options_page":"options.html",
+
+    "browser_action": {
+        "default_icon": "Images/TSS_icon.png",
+
+	"default_popup": "popup.html",
+        "default_title": "[Speech] Fetcher"
+    },
+    
+    "content_scripts": [
+        {
+        "matches": ["*://*.youtube.com/*" , "*://*.youtu.be/*"],
+        "js" : ["jquery-2.1.4.min.js", "contentscript.js"]
+        }
+    ]
+
+}
+
+                        
+                
+
+                        
+            
